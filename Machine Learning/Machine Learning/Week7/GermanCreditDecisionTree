@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname="helvetica"] ;
+edge [fontname="helvetica"] ;
+0 [label=<checkin_acc &le; 1.5<br/>entropy = 0.881<br/>samples = 800<br/>value = [560, 240]<br/>class = Bad Credit>, fillcolor="#f0b78e"] ;
+1 [label=<duration &le; 22.5<br/>entropy = 0.988<br/>samples = 433<br/>value = [244, 189]<br/>class = Bad Credit>, fillcolor="#f9e3d2"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<credit_history &le; 1.5<br/>entropy = 0.928<br/>samples = 242<br/>value = [159, 83]<br/>class = Bad Credit>, fillcolor="#f3c3a0"] ;
+1 -> 2 ;
+3 [label=<entropy = 0.863<br/>samples = 21<br/>value = [6, 15]<br/>class = Good Credit>, fillcolor="#88c4ef"] ;
+2 -> 3 ;
+4 [label=<entropy = 0.89<br/>samples = 221<br/>value = [153, 68]<br/>class = Bad Credit>, fillcolor="#f1b991"] ;
+2 -> 4 ;
+5 [label=<savings_acc &le; 2.5<br/>entropy = 0.991<br/>samples = 191<br/>value = [85, 106]<br/>class = Good Credit>, fillcolor="#d8ecfa"] ;
+1 -> 5 ;
+6 [label=<entropy = 0.951<br/>samples = 154<br/>value = [57, 97]<br/>class = Good Credit>, fillcolor="#add7f4"] ;
+5 -> 6 ;
+7 [label=<entropy = 0.8<br/>samples = 37<br/>value = [28, 9]<br/>class = Bad Credit>, fillcolor="#edaa79"] ;
+5 -> 7 ;
+8 [label=<inst_plans &le; 0.5<br/>entropy = 0.582<br/>samples = 367<br/>value = [316, 51]<br/>class = Bad Credit>, fillcolor="#e99559"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label=<amount &le; 3741.0<br/>entropy = 0.954<br/>samples = 40<br/>value = [25, 15]<br/>class = Bad Credit>, fillcolor="#f5cdb0"] ;
+8 -> 9 ;
+10 [label=<entropy = 0.85<br/>samples = 29<br/>value = [21, 8]<br/>class = Bad Credit>, fillcolor="#efb184"] ;
+9 -> 10 ;
+11 [label=<entropy = 0.946<br/>samples = 11<br/>value = [4, 7]<br/>class = Good Credit>, fillcolor="#aad5f4"] ;
+9 -> 11 ;
+12 [label=<present_emp_since &le; 2.5<br/>entropy = 0.5<br/>samples = 327<br/>value = [291, 36]<br/>class = Bad Credit>, fillcolor="#e89151"] ;
+8 -> 12 ;
+13 [label=<entropy = 0.628<br/>samples = 178<br/>value = [150, 28]<br/>class = Bad Credit>, fillcolor="#ea995e"] ;
+12 -> 13 ;
+14 [label=<entropy = 0.302<br/>samples = 149<br/>value = [141, 8]<br/>class = Bad Credit>, fillcolor="#e68844"] ;
+12 -> 14 ;
+}
